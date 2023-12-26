@@ -1,5 +1,5 @@
 <div class="gstore-breadcrumb position-relative z-1 overflow-hidden mt--50">
-    <img src="{{ staticAsset('frontend/default/assets/img/shapes/bg-shape-6.png') }}" alt="bg-shape"
+    {{-- <img src="{{ staticAsset('frontend/default/assets/img/shapes/bg-shape-6.png') }}" alt="bg-shape"
         class="position-absolute start-0 z--1 w-100 bg-shape">
    <!-- <img src="{{ staticAsset('frontend/default/assets/img/shapes/plastic.png') }}" alt="plastic"
         class="position-absolute pata-xs z--1 vector-shape"> -->
@@ -24,7 +24,7 @@
     <img src="{{ staticAsset('frontend/default/assets/img/shapes/sprite.png') }}" alt="sprite"
         class="position-absolute z--1 cauliflower vector-shape">
     <img src="{{ staticAsset('frontend/default/assets/img/shapes/fanta.png') }}" alt="fanta"
-        class="position-absolute z--1 leaf-gray vector-shape">
+        class="position-absolute z--1 leaf-gray vector-shape"> --}}
     <div class="container">
         <div class="row">
             <div class="col-12">

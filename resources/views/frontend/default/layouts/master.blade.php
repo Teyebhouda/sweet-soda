@@ -68,7 +68,7 @@
     <!-- endbuild --> 
 
     <!-- PWA  -->
-    <meta name="theme-color" content="#6eb356"/>
+    <meta name="theme-color" content="#5903f2"/>
     <link rel="apple-touch-icon" href="{{ staticAsset('/pwa.png') }}"/>
     <link rel="manifest" href="{{ staticAsset('/manifest.json') }}"/>
  

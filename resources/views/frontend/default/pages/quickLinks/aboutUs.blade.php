@@ -47,9 +47,9 @@
                             <span>
                                 <svg width="78" height="16" viewBox="0 0 78 16" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
-                                    <line x1="0.0138875" y1="7.0001" x2="72.0139" y2="8.0001" stroke="#FF7C08"
+                                    <line x1="0.0138875" y1="7.0001" x2="72.0139" y2="8.0001" stroke="#192a3c"
                                         stroke-width="2" />
-                                    <path d="M78 8L66 14.9282L66 1.0718L78 8Z" fill="#FF7C08" />
+                                    <path d="M78 8L66 14.9282L66 1.0718L78 8Z" fill="#192a3c" />
                                 </svg>
                             </span>
                         </div>
@@ -170,8 +170,8 @@
                                     <svg width="58" height="10" viewBox="0 0 58 10" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <line x1="-6.99382e-08" y1="5.2" x2="52" y2="5.2"
-                                            stroke="#FF7C08" stroke-width="1.6" />
-                                        <path d="M58 5L50.5 9.33013L50.5 0.669872L58 5Z" fill="#FF7C08" />
+                                            stroke="#192a3c" stroke-width="1.6" />
+                                        <path d="M58 5L50.5 9.33013L50.5 0.669872L58 5Z" fill="#192a3c" />
                                     </svg>
                                 </span>
                             </div>

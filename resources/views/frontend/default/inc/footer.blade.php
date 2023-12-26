@@ -1,10 +1,10 @@
-<div class="footer-curve position-relative overflow-hidden">
+{{-- <div class="footer-curve position-relative overflow-hidden">
     <span class="position-absolute section-curve-wrapper top-0 h-100"
         data-background="{{ staticAsset('frontend/default/assets/img/shapes/section-curve.png') }}"></span>
-</div>
+</div> --}}
 
 <footer class="gshop-footer position-relative pt-8 bg-dark z-1 overflow-hidden">
-    <img src="{{ staticAsset('frontend/default/assets/img/shapes/Bag.png') }}" alt="Bag"
+    {{-- <img src="{{ staticAsset('frontend/default/assets/img/shapes/Bag.png') }}" alt="Bag"
         class="position-absolute z--1 tomato vector-shape">
     <img src="{{ staticAsset('frontend/default/assets/img/shapes/Lunchbox 3.png') }}" alt="Lunchbox 3"
         class="position-absolute z--1 pata-lg vector-shape">
@@ -22,7 +22,7 @@
     <img src="{{ staticAsset('frontend/default/assets/img/shapes/Plastic Cup.png') }}" alt="Plastic Cup"
         class="position-absolute tomato-slice vector-shape z--1">
     <img src="{{ staticAsset('frontend/default/assets/img/shapes/Kit-couvert-4-en-1.png') }}" alt="Kit-couvert-4-en-1"
-        class="position-absolute tomato-half z--1 vector-shape">
+        class="position-absolute tomato-half z--1 vector-shape"> --}}
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-xl-5 col-lg-6">

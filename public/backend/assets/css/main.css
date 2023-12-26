@@ -30,7 +30,7 @@
     --bs-gray-800: #212b36;
     --bs-gray-900: #161c24;
     --bs-primary: #4eb529;
-    --bs-accent: #ff7c08;
+    --bs-accent: #192a3c;
     --bs-secondary: #f4f6f8;
     --bs-success: #20b250;
     --bs-info: #0d5abf;
@@ -3561,8 +3561,8 @@ fieldset:disabled .btn {
 }
 .btn-accent {
     --bs-btn-color: #000;
-    --bs-btn-bg: #ff7c08;
-    --bs-btn-border-color: #ff7c08;
+    --bs-btn-bg: #192a3c;
+    --bs-btn-border-color: #192a3c;
     --bs-btn-hover-color: #000;
     --bs-btn-hover-bg: #ff902d;
     --bs-btn-hover-border-color: #ff8921;
@@ -3572,8 +3572,8 @@ fieldset:disabled .btn {
     --bs-btn-active-border-color: #ff8921;
     --bs-btn-active-shadow: unset;
     --bs-btn-disabled-color: #000;
-    --bs-btn-disabled-bg: #ff7c08;
-    --bs-btn-disabled-border-color: #ff7c08;
+    --bs-btn-disabled-bg: #192a3c;
+    --bs-btn-disabled-border-color: #192a3c;
 }
 .btn-secondary {
     --bs-btn-color: #000;
@@ -3704,19 +3704,19 @@ fieldset:disabled .btn {
     --bs-gradient: none;
 }
 .btn-outline-accent {
-    --bs-btn-color: #ff7c08;
-    --bs-btn-border-color: #ff7c08;
+    --bs-btn-color: #192a3c;
+    --bs-btn-border-color: #192a3c;
     --bs-btn-hover-color: #000;
-    --bs-btn-hover-bg: #ff7c08;
-    --bs-btn-hover-border-color: #ff7c08;
+    --bs-btn-hover-bg: #192a3c;
+    --bs-btn-hover-border-color: #192a3c;
     --bs-btn-focus-shadow-rgb: 255, 124, 8;
     --bs-btn-active-color: #000;
-    --bs-btn-active-bg: #ff7c08;
-    --bs-btn-active-border-color: #ff7c08;
+    --bs-btn-active-bg: #192a3c;
+    --bs-btn-active-border-color: #192a3c;
     --bs-btn-active-shadow: unset;
-    --bs-btn-disabled-color: #ff7c08;
+    --bs-btn-disabled-color: #192a3c;
     --bs-btn-disabled-bg: transparent;
-    --bs-btn-disabled-border-color: #ff7c08;
+    --bs-btn-disabled-border-color: #192a3c;
     --bs-gradient: none;
 }
 .btn-outline-secondary {
@@ -7915,11 +7915,11 @@ fieldset:disabled .btn {
     color: #4eb529 !important;
 }
 .link-accent {
-    color: #ff7c08 !important;
+    color: #192a3c !important;
 }
 .link-accent:hover,
 .link-accent:focus {
-    color: #ff7c08 !important;
+    color: #192a3c !important;
 }
 .link-secondary {
     color: #f4f6f8 !important;
@@ -34007,7 +34007,7 @@ body {
 }
 .bg-soft-accent {
     background-color: rgba(255, 124, 8, 0.15);
-    color: #ff7c08;
+    color: #192a3c;
 }
 .bg-soft-secondary {
     background-color: rgba(244, 246, 248, 0.15);
@@ -34179,15 +34179,15 @@ body {
 .btn-soft-accent {
     border-color: rgba(255, 124, 8, 0.15);
     background-color: rgba(255, 124, 8, 0.15);
-    color: #ff7c08;
+    color: #192a3c;
 }
 .btn-soft-accent:hover,
 .btn-soft-accent:active,
 .btn-soft-accent:focus,
 .btn-soft-accent.active,
 .btn-soft-accent.show {
-    border-color: #ff7c08;
-    background-color: #ff7c08;
+    border-color: #192a3c;
+    background-color: #192a3c;
     color: #fff !important;
 }
 .btn-soft-secondary {
@@ -36347,7 +36347,7 @@ button.note-btn.dropdown-toggle:after {
     width: 5px;
     height: 5px;
     border-radius: 50%;
-    background: #ff7c08;
+    background: #192a3c;
 }
 .tt-single-category-brand .tt-category-brand-info .tt-icon-box::before {
     left: 0;

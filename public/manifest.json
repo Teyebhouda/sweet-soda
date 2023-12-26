@@ -5,7 +5,7 @@
     "background_color": "#6777ef",
     "description": "Grostore",
     "display": "fullscreen",
-    "theme_color": "#6eb356",
+    "theme_color": "#5903f2",
     "icons": [
         {
             "src": "pwa.png",

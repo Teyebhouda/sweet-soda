@@ -93,6 +93,7 @@ jQuery(function ($) {
     //3. All Carousel
     let gShopHeroSlider = new Swiper(".gshop-hero-slider", {
         slidesPerView: 1,
+        loop: true,
         autoplay: {
             delay: 5000,
         },
@@ -122,11 +123,18 @@ jQuery(function ($) {
             modifier: 1.5,
             slideShadows: false,
         },
+        autoplay: {
+            delay: 5000, // Change slides every 5 seconds (adjust as needed)
+            disableOnInteraction: false, // Continue autoplay even when user interacts with the slider
+        },
     });
     let gshopFeedbackSlider = new Swiper(".gshop-feedback-slider", {
         slidesPerView: 1,
         centeredSlides: true,
-        autoplay: true,
+        autoplay: {
+            delay: 5000, // Change slides every 5 seconds (adjust as needed)
+            disableOnInteraction: false, // Continue autoplay even when user interacts with the slider
+        },
         speed: 700,
         loop: true,
         loopedSlides: 6,
@@ -139,6 +147,10 @@ jQuery(function ($) {
         speed: 700,
         loop: true,
         loopedSlides: 6,
+        autoplay: {
+            delay: 5000, // Change slides every 5 seconds (adjust as needed)
+            disableOnInteraction: false, // Continue autoplay even when user interacts with the slider
+        },
     });
     let productThumbnailSlider = new Swiper(".product-thumbnail-slider", {
         slidesPerView: 4,
@@ -159,6 +171,10 @@ jQuery(function ($) {
                 slidesPerView: 4,
             },
         },
+        autoplay: {
+            delay: 5000, // Change slides every 5 seconds (adjust as needed)
+            disableOnInteraction: false, // Continue autoplay even when user interacts with the slider
+        },
     });
     if (quickViewProductSlider && quickViewProductSlider.length > 0) {
         quickViewProductSlider.forEach(function (item, index) {
@@ -172,7 +188,10 @@ jQuery(function ($) {
     let rlProductSlider = new Swiper(".rl-products-slider", {
         slidesPerView: 4,
         speed: 700,
-        autoplay: true,
+        autoplay: {
+            delay: 5000, // Change slides every 5 seconds (adjust as needed)
+            disableOnInteraction: false, // Continue autoplay even when user interacts with the slider
+        },
         spaceBetween: 24,
         loop: true,
         navigation: {

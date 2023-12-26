@@ -55,7 +55,7 @@ use App\Http\Controllers\Backend\Roles\RolesController;
 use App\Http\Controllers\Backend\Reports\ReportsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Backend\CatalogController;
-
+use App\Http\Controllers\SliderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -173,6 +173,9 @@ Route::group(
             Route::post('/update-product', [ProductsController::class, 'update'])->name('admin.products.update');
             Route::post('/update-featured-product', [ProductsController::class, 'updateFeatured'])->name('admin.products.updateFeatureStatus');
             Route::post('/update-published-product', [ProductsController::class, 'updatePublishedStatus'])->name('admin.products.updatePublishedStatus');
+            Route::post('/update-afficher-product', [ProductsController::class, 'updateAfficherStatus'])->name('admin.products.updateAfficherStatus');
+   
+
             Route::get('/delete-product/{id}', [ProductsController::class, 'delete'])->name('admin.products.delete');
 
             # categories 
@@ -533,3 +536,4 @@ Route::group(
         });
     }
 );
+Route::resource('slider', SliderController::class);
