@@ -32018,3 +32018,12 @@ blockquote .quote-icon {
     right: auto;
   }
 }
+@media (max-width: 767px) {
+  .gshop-hero-slider .gshop-hero-single .hero-img {
+      /* Adjust properties for better mobile display */
+      -webkit-transform: translateY(0) scale(1);
+      transform: translateY(0) scale(1);
+      opacity: 1;
+      /* Adjust any other necessary properties */
+  }
+}
