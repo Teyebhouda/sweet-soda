@@ -1,4 +1,4 @@
-<section class="pt-120 pb-200 bg-shade position-relative overflow-hidden z-1">
+<section class="pt-8 pb-100 bg-shade position-relative overflow-hidden z-1 trending-products-area">
    <!-- <img src="{{ staticAsset('frontend/default/assets/img/shapes/Paper.png') }}" alt="Paper"
         class="position-absolute garlic z--1" data-parallax='{"y": 100}'>
     <img src="{{ staticAsset('frontend/default/assets/img/shapes/Black Cup.png') }}" alt="Black Cup"
@@ -49,7 +49,7 @@ if($product->id == $trending_product)
 
             @foreach ($trendingProducts as $product)
                 <div
-                    class="col-xxl-3 col-lg-4 col-md-6 col-sm-10 filter_item
+                    class="col-xxl-3 col-lg-4 col-md-6 col-sm-10 filter_item bg-shade
                     @php
 if($product->categories()->count() > 0){ 
                             foreach ($product->categories as $category) {
@@ -63,4 +63,6 @@ if($product->categories()->count() > 0){
             @endforeach
         </div>
     </div>
+    <img src="{{ staticAsset('frontend/default/assets/img/shapes/bg-shape-2.png') }}" alt="bg shape"
+    class="position-absolute start-0 bottom-0 w-100 z--1">
 </section>

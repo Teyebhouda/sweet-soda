@@ -1,4 +1,4 @@
-<div class="vertical-product-card rounded-2 position-relative bg-shade">
+<div class="vertical-product-card rounded-2 position-relative {{ isset($bgClass) ? $bgClass : '' }}">
 
     @php
         $discountPercentage = discountPercentage($product);
