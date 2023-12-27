@@ -1,4 +1,4 @@
-<section class="pt-8 pb-100 bg-shade position-relative overflow-hidden z-1 trending-products-area">
+<section class="pt-120 pb-200 bg-shade position-relative overflow-hidden z-1">
    <!-- <img src="{{ staticAsset('frontend/default/assets/img/shapes/Paper.png') }}" alt="Paper"
         class="position-absolute garlic z--1" data-parallax='{"y": 100}'>
     <img src="{{ staticAsset('frontend/default/assets/img/shapes/Black Cup.png') }}" alt="Black Cup"
