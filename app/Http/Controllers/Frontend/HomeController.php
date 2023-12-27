@@ -63,7 +63,7 @@ class HomeController extends Controller
             $apiStock = $produitApi['StockActual'];
             $apiunité = $produitApi['unité_lot'];
             $apiQTEUNITE = $produitApi['QTEUNITE'];
-    
+            // $apiPoids = $produitApi['Poids'];
             $matchingProduct = Product::where('slug', $barcode)->with('categories')->first();
         
             if ($matchingProduct !== null && $matchingProduct->is_published == 1) {
@@ -82,7 +82,7 @@ class HomeController extends Controller
                     $matchingProduct->Unit = $apiunité;
                 }
                 $matchingProduct->name = $name;
-
+                // $matchingProduct->Poids = $apiPoids;
             }
             if ($matchingProduct !== null && $matchingProduct->is_published == 1) {
                 $virtualProducts->push($matchingProduct);
