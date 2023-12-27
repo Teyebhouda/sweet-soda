@@ -95,6 +95,7 @@
             <form action="" class="direct-add-to-cart-form">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <input type="hidden" name="product_price" value="{{ $product->max_price }}">
+                <input type="hidden" name="product_poids" value="{{ $product->Poids }}">
                 <input type="hidden" name="product_variation_id" value="{{ $product->variations[0]->id }}">
                 <input type="hidden" value="1" name="quantity">
             

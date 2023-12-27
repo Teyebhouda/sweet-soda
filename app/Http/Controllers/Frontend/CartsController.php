@@ -44,6 +44,8 @@ class CartsController extends Controller
                 $cart = new Cart;
                 $cart->product_variation_id = $productVariation->id;
                 $cart->product_price = $request->product_price;
+                $cart->product_poids = $request->product_poids * $cart->qty;
+               
                 if($request->quantity > $product->max_purchase_qty){
                     $cart->qty                  = (int) $product->max_purchase_qty;
                 }else{

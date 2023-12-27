@@ -196,10 +196,13 @@ class CheckoutController extends Controller
                 ->where('location_id', $stockLocationId);
             
             $carts = $cartsQuery->get();
-            
-            
+            $poidsnet = 0; //
+            foreach ($carts as $cartItem) {
+                $poidsnet += $cartItem->product_poids; // Accumulate the product_poids for each cart.
+            }
             $mainOrderApiData = [
                 "LASource" => $request->payment_method . ',' . $request->shipping_delivery_type . ',' . $logisticZone->logistic->name . ',' . $orderGroup->payment_status . ',' . $orderGroup->payment_details,
+                "PoidNet" => $poidsnet ,
             ];
             
             // Document API request
@@ -248,6 +251,7 @@ class CheckoutController extends Controller
                         "totaletva"       => $cart->total_tax,
                         "IDProduit"        => $cart->product_variation->product->id,
                         "dateheuresaisie" => now()->format('Y-m-d H:i:s'),
+                        "PoidNet"  => $cart->product_poids,
                     ];
 
                   //  dd( $apiLineData);

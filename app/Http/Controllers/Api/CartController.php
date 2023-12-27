@@ -33,6 +33,7 @@ class CartController extends Controller
                 $cart = new Cart;
                 $cart->product_variation_id = $productVariation->id;
                 $cart->product_price = $request->product_price;
+                $cart->product_poids = $request->product_poids * $cart->qty;
                 $cart->qty                  = (int) $request->quantity;
                 $cart->location_id          = $request->header("Stock-Location-Id");
 
