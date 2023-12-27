@@ -102,7 +102,7 @@ class ProductsController extends Controller
                 $apiStock = $produitApi['StockActual'];
                 $apiunité = $produitApi['unité_lot'];
                 $apiQTEUNITE = $produitApi['QTEUNITE'];
-                $apiPoids = $produitApi['Poids'];
+                // $apiPoids = $produitApi['Poids'];
         
           // Find products with matching barcode
           if (!(isset($existingProducts[$barcode]))) {
@@ -122,6 +122,7 @@ class ProductsController extends Controller
         $newProduct->max_purchase_qty = 1000;
         $newProduct->is_published = 1;
         $newProduct->afficher = 1;
+        // $newProduct->Poids = $apiPoids;
 
         // Set other properties accordingly based on your product model
         
@@ -179,7 +180,9 @@ class ProductsController extends Controller
                 if ($matchingProduct->Unit != $apiunité) {
                     $matchingProduct->Unit = $apiQTEUNITE;
                 }
-                
+               
+                  $matchingProduct->Poids = $apiPoids;
+                }
                 $virtualProducts->push($matchingProduct);
                 
           

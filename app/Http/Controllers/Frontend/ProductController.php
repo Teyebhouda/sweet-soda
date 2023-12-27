@@ -64,7 +64,7 @@ class ProductController extends Controller
             $apiStock = $produitApi['StockActual'];
             $apiunité = $produitApi['unité_lot'];
             $apiQTEUNITE = $produitApi['QTEUNITE'];
-
+            // $apiPoids = $produitApi['Poids'];
             // Find products with matching barcode
             if (!(isset($existingProducts[$barcode]))) {
             
@@ -80,6 +80,7 @@ class ProductController extends Controller
             $newProduct->has_variation = 0;
             $newProduct->Qty_Unit = $apiQTEUNITE;
             $newProduct->Unit = $apiunité;
+            // $newProduct->Poids = $apiPoids;
             // Set other properties accordingly based on your product model
 
             $newProduct->save();
@@ -116,6 +117,7 @@ class ProductController extends Controller
             $apiStock = $produitApi['StockActual'];
             $apiunité = $produitApi['unité_lot'];
             $apiQTEUNITE = $produitApi['QTEUNITE'];
+            // $apiPoids = $produitApi['Poids'];
             if (isset($existingProducts[$barcode])) {
                 $matchingProduct = $existingProducts[$barcode];
                 
@@ -134,6 +136,9 @@ class ProductController extends Controller
                 if ($matchingProduct->Unit != $apiunité) {
                     $matchingProduct->Unit = $apiunité;
                 }
+                // if ($matchingProduct->Poids != $apiPoids) {
+                //     $matchingProduct->Poids = $apiPoids;
+                // }
                 $matchingProduct->name = $name;
                 $virtualProducts->push($matchingProduct);
             } else {
@@ -312,7 +317,7 @@ class ProductController extends Controller
             $apiunité = $produitApi['unité_lot'];
             $apiQTEUNITE = $produitApi['QTEUNITE'];
             $name = $produitApi['Libellé'];
-
+            // $apiPoids = $produitApi['Poids'];
             if($produitApi['codeabarre'] == $slug ){
 
                 
@@ -323,7 +328,7 @@ class ProductController extends Controller
                 $product->Unit = $apiunité;
                 $product->Qty_Unit = $apiQTEUNITE;
                 $product->name = $name;
-
+                // $product->$apiPoids = $apiPoids;
                 break;
                 
             }
@@ -387,7 +392,7 @@ class ProductController extends Controller
             $apiunité = $produitApi['unité_lot'];
             $apiQTEUNITE = $produitApi['QTEUNITE'];
             $name = $produitApi['Libellé'];
-
+            // $apiPoids = $produitApi['Poids'];
             $barcode = $produitApi['codeabarre'];
             $matchingChild = $product->parents()->where('slug', $barcode)->where('is_published', 1)->first();
             $matchingrelatedProduct = $relatedProducts->where('slug', $barcode)->first();
@@ -405,7 +410,7 @@ class ProductController extends Controller
            
                 $matchingChild->Unit = $apiunité;
                 $matchingChild->name = $name;
-                
+                // $matchingChild->Poids = $apiPoids;
                  $virtualChildrenProducts->push($matchingChild);
 
                  //dd($matchingChild);
@@ -425,7 +430,7 @@ class ProductController extends Controller
            
                 $matchingrelatedProduct->Unit = $apiunité;
                 $matchingrelatedProduct->name = $name;
-        
+                // $matchingChild->Poids = $apiPoids;
                 $virtualRelatedProducts->push($matchingrelatedProduct);
 
             }
@@ -472,7 +477,7 @@ class ProductController extends Controller
             $apiunité = $produitApi['unité_lot'];
             $apiQTEUNITE = $produitApi['QTEUNITE'];
             $name = $produitApi['Libellé'];
-
+            // $apiPoids = $produitApi['Poids'];
             if($produitApi['codeabarre'] == $product->slug ){
 
                 
@@ -483,6 +488,7 @@ class ProductController extends Controller
                 $product->Unit = $apiunité;
                 $product->Qty_Unit = $apiQTEUNITE;
                 $product->name = $name;
+                // $product->Poids = $apiPoids;
 
             }
         }
