@@ -102,6 +102,7 @@ class ProductsController extends Controller
                 $apiStock = $produitApi['StockActual'];
                 $apiunité = $produitApi['unité_lot'];
                 $apiQTEUNITE = $produitApi['QTEUNITE'];
+                $apiPoids = $produitApi['Poids'];
         
           // Find products with matching barcode
           if (!(isset($existingProducts[$barcode]))) {
