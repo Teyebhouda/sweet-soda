@@ -14,7 +14,7 @@
     <!--category section end-->
 
     <!--featured products start-->
-    @include('frontend.default.pages.partials.home.featuredProducts')
+    {{-- @include('frontend.default.pages.partials.home.featuredProducts') --}}
     <!--featured products end-->
 
     <!--trending products start-->
@@ -26,7 +26,7 @@
     <!--banner section end-->
 
     <!--banner section start-->
-    @include('frontend.default.pages.partials.home.bestDeals')
+    {{-- @include('frontend.default.pages.partials.home.bestDeals') --}}
     <!--banner section end-->
 
     <!--banner 2 section start-->
@@ -34,7 +34,7 @@
     <!--banner 2 section end-->
 
     <!--feedback section start-->
-    @include('frontend.default.pages.partials.home.feedback')
+    {{-- @include('frontend.default.pages.partials.home.feedback') --}}
     <!--feedback section end-->
 
 
