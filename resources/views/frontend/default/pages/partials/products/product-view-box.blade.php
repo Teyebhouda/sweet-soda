@@ -12,6 +12,10 @@
                         <span class="fw-bold text-muted">Référence:</span>
                         <span class="fw-bold text-danger">{{ $product->slug }}</span>
                     </div>
+                    <div class="d-flex justify-content-between">
+                        <span class="fw-bold text-muted">Poids:</span>
+                        <span class="fw-bold text-danger">{{ $product->Poids }}</span>
+                    </div>
                 <!-- pricing -->
                 <div class="pricing all-pricing mt-2">
                     @include('frontend.default.pages.partials.products.pricing', compact('product'))
