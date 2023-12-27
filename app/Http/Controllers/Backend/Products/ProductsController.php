@@ -150,15 +150,15 @@ class ProductsController extends Controller
             
 
 
-        // foreach ($produitsApi as $produitApi) {
-        //     $name = $produitApi['Libellé'];
-        //     $barcode = $produitApi['codeabarre'];
-        //     $apiPrice = $produitApi['PrixVTTC'];
-        //     $apiPriceHT = $produitApi['PrixVenteHT'];
-        //     $apiStock = $produitApi['StockActual'];
-        //     $apiunité = $produitApi['unité_lot'];
-        //     $apiQTEUNITE = $produitApi['QTEUNITE'];
-        //     if (isset($existingProducts[$barcode])) {
+        foreach ($produitsApi as $produitApi) {
+            $name = $produitApi['Libellé'];
+            $barcode = $produitApi['codeabarre'];
+            $apiPrice = $produitApi['PrixVTTC'];
+            $apiPriceHT = $produitApi['PrixVenteHT'];
+            $apiStock = $produitApi['StockActual'];
+            $apiunité = $produitApi['unité_lot'];
+            $apiQTEUNITE = $produitApi['QTEUNITE'];
+            if (isset($existingProducts[$barcode])) {
         } else {    
             $matchingProduct = $existingProducts[$barcode];
             if ($matchingProduct->Unit != $name) {

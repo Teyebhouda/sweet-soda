@@ -34,6 +34,6 @@
     cursor: pointer;
 }
 .product-radio-btn li input:checked + label {
-    border-color: #4eb529;
-    color: #4eb529;
+    border-color: #5903f2;
+    color: #5903f2;
 }
