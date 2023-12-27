@@ -268,7 +268,7 @@ $virtualProducts = $virtualProducts->merge($dbProducts)->unique('slug');*/
     
         return view('backend.pages.products.products.index', compact('paginatedProducts', 'brands', 'searchKey', 'brand_id', 'is_published', ));
     }
-    
+}
     # return view of create form
     public function create()
     {
