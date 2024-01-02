@@ -49,7 +49,7 @@ class ProductsController extends Controller
         $apiUrl = env('API_CATEGORIES_URL');
         $response = Http::get($apiUrl . 'ListeDePrixWeb/');
         $produitsApi = $response->json();
-    dd($produitsApi);
+  //  dd($produitsApi);
         // Retrieve all existing products and organize them by slug
         $barcodes = collect($produitsApi)->pluck('codeabarre')->toArray();
         
