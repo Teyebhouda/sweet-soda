@@ -61,10 +61,15 @@ class CartsController extends Controller
                 $message =  localize('Produit ajouté à votre panier');
             } else {
                 $product = $cart->product_variation->product; 
-                if($product->max_purchase_qty > $cart->qty){ 
+                if($product->max_purchase_qty > $cart->qty && $product->max_purchase_qty > ($cart->qty + $request->quantity)){ 
                     $cart->qty                  += (int) $request->quantity;
                     $message =  localize('La quantité a été augmentée');
-                }else{ 
+                }
+                else if ($product->max_purchase_qty > $cart->qty && $product->max_purchase_qty < ($cart->qty + $request->quantit)) {
+                    $cart->qty                 = (int) $product->max_purchase_qty;
+                    $message =  localize('La quantité a été augmentée');
+                }
+                else{ 
                     $message = localize('Vous avez atteint la quantité maximale autorisée pour ce produit lors d\'une seule commande.');
                     return $this->getCartsInfo($message, true, '', 'Attention');
                 } 
@@ -86,11 +91,11 @@ class CartsController extends Controller
                 $product = $cart->product_variation->product;
 
                 if($product->max_purchase_qty > $cart->qty){
-                    $productVariationStock = $cart->product_variation->product_variation_stock;
-                    if ($productVariationStock->stock_qty > $cart->qty) {
-                        $cart->qty += 1;
+                    // $productVariationStock = $cart->product_variation->product_variation_stock;
+                    // if ($productVariationStock->stock_qty > $cart->qty) {
+                         $cart->qty += 1;
                         $cart->save();
-                    }
+                    // }
                 }else{ 
                     $message = localize('Vous avez atteint la quantité maximale de commande pour ce produit');
                     return $this->getCartsInfo($message, true, '', 'warning');
