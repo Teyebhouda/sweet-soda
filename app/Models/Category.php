@@ -8,7 +8,16 @@ use Illuminate\Database\Eloquent\Model;
 class Category extends Model
 {
     use HasFactory; 
-
+    protected $fillable = [
+        'name',
+        // Add other fields that should be mass-assignable here
+        'sorting_order_level',
+        'level',
+        'is_featured',
+        'is_top',
+        'total_sale_count',
+        // ... other fields
+    ];
     public function categories()
     {
         return $this->hasMany(Category::class, 'parent_id')->with('categories');
