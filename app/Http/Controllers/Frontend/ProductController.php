@@ -65,6 +65,7 @@ class ProductController extends Controller
             $apiunité = $produitApi['unité_lot'];
             $apiQTEUNITE = $produitApi['QTEUNITE'];
             $apiPoids = $produitApi['Poids'];
+            $apiFamille = $produitApi['Famille'];
             // Find products with matching barcode
             if (!(isset($existingProducts[$barcode]))) {
             
@@ -84,7 +85,21 @@ class ProductController extends Controller
             // Set other properties accordingly based on your product model
 
             $newProduct->save();
-
+            $category = Category::firstOrCreate(
+                ['name' => $apiFamille],
+                [
+                    'sorting_order_level' => 0,
+                    'level' => 0,,
+                    'is_featured' => 0,,
+                    'is_top' => 0,
+                    'total_sale_count' => 0,
+                    // ... and other fields you need to set during creation
+                ]
+            );
+            // Attach the category to the product
+            $newProduct->product_categories()->syncWithoutDetaching([$category->id]);
+       
+    
             $variation              = new ProductVariation;
             $variation->product_id  = $newProduct->id;
             // $variation->sku         = $request->sku;
