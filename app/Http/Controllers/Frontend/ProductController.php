@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Http\Resources\ProductVariationInfoResource;
 use App\Models\Product;
 use App\Models\ProductCategory;
+use App\Models\Category;
+
 use App\Models\ProductTag;
 use App\Models\ProductVariation;
 use App\Models\Tag;
@@ -93,11 +95,12 @@ class ProductController extends Controller
                     'is_featured' => 0,,
                     'is_top' => 0,
                     'total_sale_count' => 0,
+                    'meta_title' => $apiFamille,
                     // ... and other fields you need to set during creation
                 ]
             );
             // Attach the category to the product
-            $newProduct->product_categories()->syncWithoutDetaching([$category->id]);
+            $newProduct->categories()->syncWithoutDetaching([$category->id]);
        
     
             $variation              = new ProductVariation;

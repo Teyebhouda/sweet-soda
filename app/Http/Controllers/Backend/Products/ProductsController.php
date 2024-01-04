@@ -136,14 +136,16 @@ class ProductsController extends Controller
                 'is_featured' => 0,
                 'is_top' => 0,
                 'total_sale_count' => 0,
+                'meta_title' => $apiFamille,
+
                 // ... and other fields you need to set during creation
             ]
         );
         // Attach the category to the product
-        $newProduct->product_categories()->syncWithoutDetaching([$category->id]);
+        $newProduct->categories()->syncWithoutDetaching([$category->id]);
    
 
-
+     
 
         $variation              = new ProductVariation;
         $variation->product_id  = $newProduct->id;
