@@ -90,6 +90,8 @@ class ProductController extends Controller
             $category = Category::firstOrCreate(
                 ['name' => $apiFamille],
                 [
+                    'parent_id' => 0,
+
                     'sorting_order_level' => 0,
                     'level' => 0,,
                     'is_featured' => 0,,
