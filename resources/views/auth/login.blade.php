@@ -23,7 +23,7 @@
                             </a>
                         </div>
                         <h2 class="mb-4 h3">{{ localize('Salut !') }}
-                            <br>{{ localize('Bienvenue chez Emballage & Cie') }}
+                            <br>{{ localize('Bienvenue chez Sweet and Soda') }}
                         </h2>
 
                         <div class="row g-3">

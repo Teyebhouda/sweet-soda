@@ -23592,7 +23592,7 @@ body {
     font-weight: 400;
 }
 .bg-shade {
-    background-color: #eef6eb;
+    background-color: rgb(155 81 224 / 16%);
 }
 .rounded-btn {
     width: 35px;
