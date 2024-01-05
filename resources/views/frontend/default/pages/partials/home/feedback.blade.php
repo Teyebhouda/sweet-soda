@@ -18,6 +18,7 @@
             <div class="col-xl-6">
                 <div class="section-title text-center">
                     <!-- <h2 class="mb-6">{{ localize('Avis de Nos Clients') }}</h2> -->
+                    <!--  -->
                 </div>
             </div>
             <div class="col-xl-8">
