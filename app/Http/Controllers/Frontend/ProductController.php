@@ -94,7 +94,7 @@ class ProductController extends Controller
 
                     'sorting_order_level' => 0,
                     'level' => 0,,
-                    'is_featured' => 0,,
+                    'is_featured' => 0,
                     'is_top' => 0,
                     'total_sale_count' => 0,
                     'meta_title' => $apiFamille,
